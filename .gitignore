@@ -1,5 +1,5 @@
-node_modules
-zh-cn
-en-us
-md_json
-build   
+/node_modules
+/zh-cn
+/en-us
+/md_json
+/build   
