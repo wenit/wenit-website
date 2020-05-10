@@ -1,0 +1,33 @@
+os: linux
+language: node_js 
+node_js:
+  - 10  # 使用 nodejs LTS v10
+
+cache:
+    directories:
+        - node_modules # 缓存 node_modules 加快构建速度
+
+before_script: ## 根据你所用的主题和自定义的不同，这里会有所不同
+    - npm install docsite -g # 在 CI 环境内安装 Hexo
+
+script: 
+    - docsite build # generate static files
+    - sh scripts/package.sh
+
+deploy:
+    provider: pages
+    repo: wenit/wenit.github.io
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep_history: true
+    local_dir: _deploy
+    # file: 
+    #     - index.html
+    #     - 404.html
+    #     - build
+    #     - img
+    #     - zh-cn
+    #     - en-us
+    on:
+        branch: master
+    target_branch: master
