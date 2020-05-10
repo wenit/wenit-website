@@ -1,3 +1,9 @@
+---
+title: 快速开始
+keywords: keywords1,keywords2,keywords3
+description: some description
+---
+
 # 脚注的使用
 
 1
