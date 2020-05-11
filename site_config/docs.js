@@ -99,8 +99,8 @@ export default {
         title: 'Go开发',
         children: [
           {
-            title: '示例1',
-            link: '/zh-cn/docs/demo1.html',
+            title: 'Go基础',
+            link: '/zh-cn/docs/go/base.html',
           },
           {
             title: '示例2',
